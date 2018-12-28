@@ -22,3 +22,5 @@ import Venus from './Venus';
  * Venus Object
  */
 const venus = new Venus();
+
+module.exports = Venus.default || Venus;
