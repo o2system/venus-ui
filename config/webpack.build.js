@@ -15,13 +15,17 @@ const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "production",
     entry: {
         "venus-ui": "./src/main.js",
         "venus-ui.min": "./src/main.js"
+    },
+    output: {
+        filename: "[name].js",
+        path: path.resolve(__dirname, "../dist"),
+        publicPath: "/"
     },
     module: {
         rules: [{
@@ -44,14 +48,7 @@ module.exports = merge(common, {
             // both options are optional
             filename: "[name].css",
             chunkFilename: "[id].css"
-        }),
-        ,
-        new CopyWebpackPlugin([
-            {
-                from: "~@fortawesome/fontawesome-free/webfonts",
-                to: "./dist/assets/webfonts"
-            }
-        ])
+        })
     ],
     optimization: {
         minimize: true,

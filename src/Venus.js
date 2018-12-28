@@ -9,12 +9,20 @@
  */
 // ------------------------------------------------------------------------
 
-require('bootstrap');
-require("main.scss");
-
-import Venus from './Venus';
+import $ from "jquery";
+import Popper from 'popper.js';
 
 /**
- * Venus Object
+ * Class Venus
  */
-const venus = new Venus();
+class Venus {
+    constructor() {
+        window.Popper = Popper.default;
+        window.$ = window.jQuery = $;
+
+        $('[data-toggle="popover"]').popover();
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+}
+
+module.exports = Venus;

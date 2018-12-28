@@ -9,8 +9,12 @@
  */
 // ------------------------------------------------------------------------
 
+require("babel-runtime/regenerator");
+require("babel-register");
+require("webpack-hot-middleware/client?reload=true");
 require('bootstrap');
-require("main.scss");
+require("./main.scss");
+require("./index.html");
 
 import Venus from './Venus';
 

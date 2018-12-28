@@ -9,17 +9,25 @@
  */
 // ------------------------------------------------------------------------
 
+const path = require("path");
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "development",
+    entry: {
+        "venus-ui": "./src/main.dev.js"
+    },
+    output: {
+        filename: "[name].js",
+        path: path.resolve(__dirname, "../dev"),
+        publicPath: "/"
+    },
     devServer: {
-            contentBase: "dist",
+            contentBase: "dev",
             overlay: true,
             stats: {
                 colors: true
@@ -35,6 +43,12 @@ module.exports = merge(common, {
                     'css-loader',
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: "html-loader"
+                }]
             }
         ]
     },
@@ -48,12 +62,6 @@ module.exports = merge(common, {
         }),
         new HTMLWebpackPlugin({
             template: "./src/index.html"
-        }),
-        new CopyWebpackPlugin([
-            {
-                from: "~@fortawesome/fontawesome-free/webfonts",
-                to: "./src/assets/webfonts"
-            }
-        ])
+        })
     ]
 });

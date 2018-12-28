@@ -12,14 +12,6 @@
 const path = require("path");
 
 module.exports = {
-    entry: {
-        "venus-ui": "./src/main.js"
-    },
-    output: {
-        filename: "[name].js",
-        path: path.resolve(__dirname, "../dist"),
-        publicPath: "/"
-    },
     module: {
         rules: [{
                 test: /\.js$/,
@@ -38,9 +30,12 @@ module.exports = {
                 }]
             },
             {
-                test: /\.html$/,
+                test: /.(woff|woff2|ttf|eot)$/,
                 use: [{
-                    loader: "html-loader"
+                    loader: "file-loader",
+                    options: {
+                        name: "assets/webfonts/[name].[ext]"
+                    }
                 }]
             }
         ]
