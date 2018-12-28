@@ -19,4 +19,8 @@ import Venus from './Venus';
  */
 const Venus = new Venus();
 
-module.exports = Venus.default || Venus;
+exports.default = function () {
+	return Venus;
+}
+
+module.exports = exports["default"];
