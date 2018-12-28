@@ -14,6 +14,7 @@ const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "development",
@@ -47,6 +48,12 @@ module.exports = merge(common, {
         }),
         new HTMLWebpackPlugin({
             template: "./src/index.html"
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: "~@fortawesome/fontawesome-free/webfonts",
+                to: "./src/assets/webfonts"
+            }
+        ])
     ]
 });

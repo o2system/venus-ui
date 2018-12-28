@@ -9,7 +9,9 @@
  */
 // ------------------------------------------------------------------------
 
-/**
- * Import all of Bootstrap’s Sass
- */
-@import "~bootstrap/less/variables";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "bootstrap-custom/bootstrap.scss";
+@import "base/base.scss";

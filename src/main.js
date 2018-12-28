@@ -11,6 +11,6 @@
 require("babel-runtime/regenerator");
 require("babel-register");
 require("webpack-hot-middleware/client?reload=true");
-require("./main.sass");
-require("./images/logo.jpeg");
+require("./main.scss");
+require("./assets/img/logo.jpeg");
 require("./index.html");
