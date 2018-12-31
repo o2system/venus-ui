@@ -62,6 +62,10 @@ module.exports = merge(common, {
         }),
         new HTMLWebpackPlugin({
             template: "./src/index.html"
+        }), // Generates default index.html
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'admin.html',
+            template: "./src/admin.html"
         })
     ]
 });

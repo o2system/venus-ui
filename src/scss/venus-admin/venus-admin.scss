@@ -1,0 +1,29 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+@import "..//bootstrap-custom/_functions.scss";
+@import "..//bootstrap-custom/_mixins.scss";
+@import "..//bootstrap-custom/_variables.scss";
+.venus-admin{
+	background-color: #f5f5f5;
+	font-family: 'Nunito', sans-serif;
+	
+	@import "~metismenu/dist/metisMenu.css";
+	@import "~sweetalert2/dist/sweetalert2.min.css";
+	@import "~toastr/toastr.scss";
+	@import "_components/mixins.scss";
+	@import "_components/header.scss";
+	@import "_components/aside.scss";
+	@import "_components/global.scss"; 
+	@import "_components/auth.scss"; 
+	@import "_components/card.scss"; 
+}

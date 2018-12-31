@@ -15,6 +15,7 @@ require("webpack-hot-middleware/client?reload=true");
 require('bootstrap');
 require("./main.scss");
 require("./index.html");
+require("./admin.html");
 
 import Venus from './Venus';
 
@@ -22,3 +23,5 @@ import Venus from './Venus';
  * Venus Object
  */
 module.exports = new Venus();
+
+require("./VenusAdmin");
