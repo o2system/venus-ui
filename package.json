@@ -3,7 +3,7 @@
   "version": "1.0.10",
   "description": "O2System User Interface Framework",
   "homepage": "https://venus.o2system.id/ui",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.build.js",

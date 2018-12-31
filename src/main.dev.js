@@ -16,17 +16,9 @@ require('bootstrap');
 require("./main.scss");
 require("./index.html");
 
+import Venus from './Venus';
+
 /**
- * Class Venus
+ * Venus Object
  */
-class Venus {
-    constructor() {
-        window.Popper = Popper.default;
-        window.$ = window.jQuery = $;
-
-        $('[data-toggle="popover"]').popover();
-        $('[data-toggle="tooltip"]').tooltip();
-    }
-}
-
 module.exports = Venus;
