@@ -20,3 +20,4 @@ import Venus from './Venus';
 module.exports = Venus;
 
 require('./VenusAdmin');
+require('./VenusForm');

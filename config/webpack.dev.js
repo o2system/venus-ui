@@ -70,6 +70,38 @@ module.exports = merge(common, {
         new HTMLWebpackPlugin({  // Also generate a test.html
             filename: 'login.html',
             template: "./src/template/admin/login.html"
-        })
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-advanced.html',
+            template: "./src/template/form/form-advanced.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-basic.html',
+            template: "./src/template/form/form-basic.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-editor.html',
+            template: "./src/template/form/form-editor.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-masks.html',
+            template: "./src/template/form/form-masks.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-pickers.html',
+            template: "./src/template/form/form-pickers.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-upload.html',
+            template: "./src/template/form/form-upload.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-validation.html',
+            template: "./src/template/form/form-validation.html"
+        }),
+        new HTMLWebpackPlugin({  // Also generate a test.html
+            filename: 'form-wizard.html',
+            template: "./src/template/form/form-wizard.html"
+        }),
     ]
 });
