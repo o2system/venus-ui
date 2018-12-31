@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------
 
 require('bootstrap');
-require("main.scss");
+require("./main.scss");
 
 /**
  * Class Venus
