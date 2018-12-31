@@ -15,13 +15,14 @@ require("webpack-hot-middleware/client?reload=true");
 require('bootstrap');
 require("./main.scss");
 require("./index.html");
-require("./admin.html");
+require("./template/admin/admin.html");
+require("./template/admin/login.html");
 
 import Venus from './Venus';
 
 /**
  * Venus Object
  */
-module.exports = new Venus();
+module.exports = Venus;
 
-require("./VenusAdmin");
+require('./VenusAdmin');

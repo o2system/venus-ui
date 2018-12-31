@@ -10,13 +10,13 @@
 // ------------------------------------------------------------------------
 
 require('bootstrap');
-require("main.scss");
+require("./main.scss");
 
 import Venus from './Venus';
 
 /**
  * Venus Object
  */
-module.exports = new Venus();
+module.exports = Venus;
 
-require("./VenusAdmin");
+require('./VenusAdmin');
