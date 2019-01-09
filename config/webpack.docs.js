@@ -25,23 +25,24 @@ module.exports = merge(common, {
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "../docs"),
-		publicPath: "/venus-ui"
+		publicPath: "/venus-ui/"
 	},
 	module: {
-		rules: [{
-			test: /\.(sa|sc|c)ss$/,
-			use: [
-			MiniCssExtractPlugin.loader,
-			'css-loader',
-			'sass-loader',
-			],
-		},
-		{
-			test: /\.html$/,
-			use: [{
-				loader: "html-loader",
-			}]
-		}
+		rules: [
+			{
+				test: /\.(sa|sc|c)ss$/,
+				use: [
+				MiniCssExtractPlugin.loader,
+				'css-loader',
+				'sass-loader',
+				],
+			},
+			{
+				test: /\.html$/,
+				use: [{
+					loader: "html-loader",
+				}]
+			}
 		]
 	},
 

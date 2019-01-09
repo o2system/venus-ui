@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.build.js",
-    "build:doc": "webpack --config=config/webpack.demo.js",
+    "build:docs": "webpack --config=config/webpack.docs.js",
     "dev": "nodemon --inspect --watch config --watch server server/main.js"
   },
   "repository": {
