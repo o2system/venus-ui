@@ -21,4 +21,6 @@ import Venus from './Venus';
 /**
  * Venus Object
  */
-module.exports = Venus;
+module.exports = new Venus;
+
+require('./form');

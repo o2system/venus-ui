@@ -37,11 +37,7 @@ module.exports = merge(common, {
             ],
         }]
     },
-    output: {
-        filename: "[name].js",
-        path: path.resolve(__dirname, "../dist"),
-        publicPath: "/"
-    },
+
     plugins: [
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output

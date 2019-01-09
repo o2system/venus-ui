@@ -27,12 +27,15 @@ module.exports = merge(common, {
         publicPath: "/"
     },
     devServer: {
-            contentBase: "dev",
-            overlay: true,
-            stats: {
-                colors: true
-            }
-        },
+        hot: true,
+        open: true,
+        historyApiFallback: true,
+        contentBase: "dev",
+        overlay: true,
+        stats: {
+            colors: true
+        }
+    },
     devtool: "source-map",
     module: {
         rules: [
@@ -62,6 +65,6 @@ module.exports = merge(common, {
         }),
         new HTMLWebpackPlugin({
             template: "./src/index.html"
-        })
+        }), // Generates default index.html
     ]
 });

@@ -1,13 +1,14 @@
 {
   "name": "o2system-venus-ui",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "O2System User Interface Framework",
   "homepage": "https://venus.o2system.id/ui",
   "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.build.js",
-    "dev": "nodemon --inspect --watch config --watch src/server src/server/main.js"
+    "build:docs": "webpack --config=config/webpack.docs.js",
+    "dev": "nodemon --inspect --watch config --watch server server/main.js"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,13 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
     "express": "^4.16.3",
     "extract-loader": "1.0.2",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "imports-loader": "^0.8.0",
     "lodash-es": "^4.17.11",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
@@ -66,7 +69,28 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
     "bootstrap": "^4.2.1",
+    "bootstrap-datepicker": "^1.8.0",
+    "bootstrap-daterangepicker": "^3.0.3",
+    "bootstrap-filestyle2": "^2.1.0",
+    "bootstrap-select": "^1.13.5",
+    "bootstrap-tagsinput": "^0.7.1",
+    "bootstrap-timepicker": "^0.5.2",
+    "dropzone": "^5.5.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "jquery-steps": "github:rstaib/jquery-steps#master",
+    "jquery-validation": "^1.19.0",
+    "metismenu": "^3.0.3",
+    "moment": "^2.23.0",
+    "nicescroll": "^3.7.4",
+    "parsleyjs": "^2.8.1",
+    "popper.js": "^1.14.6",
+    "select2": "^4.0.6-rc.1",
+    "selectize": "^0.12.6",
+    "selectize-bootstrap4-theme": "^2.0.2",
+    "sweetalert2": "^7.33.1",
+    "swi": "^0.1.1",
+    "switchery": "0.0.2",
+    "tinymce": "^4.9.2",
+    "toastr": "^2.1.4"
   }
 }
