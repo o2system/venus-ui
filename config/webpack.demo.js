@@ -25,7 +25,7 @@ module.exports = merge(common, {
 	output: {
 		filename: "[name].js",
 		path: path.resolve(__dirname, "../docs"),
-		publicPath: "/"
+		publicPath: "/venus-ui"
 	},
 	module: {
 		rules: [{
