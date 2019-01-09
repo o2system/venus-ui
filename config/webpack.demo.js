@@ -39,7 +39,7 @@ module.exports = merge(common, {
 		{
 			test: /\.html$/,
 			use: [{
-				loader: "html-loader"
+				loader: "html-loader",
 			}]
 		}
 		]
