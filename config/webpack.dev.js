@@ -27,12 +27,14 @@ module.exports = merge(common, {
         publicPath: "/"
     },
     devServer: {
-            contentBase: "dev",
-            overlay: true,
-            stats: {
-                colors: true
-            }
-        },
+        hot: true,
+        historyApiFallback: true,
+        contentBase: "dev",
+        overlay: true,
+        stats: {
+            colors: true
+        }
+    },
     devtool: "source-map",
     module: {
         rules: [

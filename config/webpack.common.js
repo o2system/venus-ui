@@ -37,7 +37,9 @@ module.exports = {
                         name: "assets/webfonts/[name].[ext]"
                     }
                 }]
-            }
-        ]
+            },
+
+        ],
+
     }
 }

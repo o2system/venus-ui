@@ -1,12 +1,13 @@
+import * as $ from 'jquery';
 import Dropzone from'dropzone';
 
 if(typeof Dropzone != 'undefined')
 {
-    var urlAction = $('[name="dropzone-url"]').val();
+    const urlAction = $('[name="dropzone-url"]').val();
 
-    var previewNode = document.querySelector('#dropzone-preview'); 
-    previewNode.id = "";
-    var previewTemplate = previewNode.parentNode.innerHTML;
+    let previewNode = document.querySelector('#dropzone-preview');
+    let previewNode.id = "";
+    let previewTemplate = previewNode.parentNode.innerHTML;
     previewNode.parentNode.removeChild(previewNode);
 
     console.log(previewNode.parentNode);
@@ -19,7 +20,7 @@ if(typeof Dropzone != 'undefined')
         previewTemplate: previewTemplate, // Define the container to display the previews
         //clickable: ".fileinput-button", // Define the element that should be used as click trigger to select files.
     });
-    
+
     mediaDropzone.on("addedfile", function(file) {
 
         var imagesFileTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/gif'];
