@@ -64,6 +64,7 @@ module.exports = merge(common, {
             chunkFilename: "[id].css"
         }),
         new HTMLWebpackPlugin({
+            title: "O2System Venus UI",
             template: "./src/index.html"
         }), // Generates default index.html
     ]

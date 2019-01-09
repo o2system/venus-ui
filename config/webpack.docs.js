@@ -48,6 +48,7 @@ module.exports = merge(common, {
 
 	plugins: [
 	new HTMLWebpackPlugin({
+		title: "O2System Venus UI",
 		template: "./src/index.html",
 		minify: {
 			collapseWhitespace: true,
