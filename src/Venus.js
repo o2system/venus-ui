@@ -25,4 +25,4 @@ class Venus {
     }
 }
 
-module.exports = Venus;
+export default Venus;

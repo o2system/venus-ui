@@ -1,17 +1,9 @@
-{
-    "presets": [
-        [
-            "env",
-            {
-                "targets": {
-                    "browsers": ["last 2 versions"]
-                },
-                "debug": false
-            }
+    {
+        "presets": [
+            "@babel/preset-env"
+        ],
+        "plugins": [
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-transform-runtime"
         ]
-    ],
-    "plugins": [
-        "syntax-dynamic-import",
-        "transform-runtime"
-    ]
-}
+    }

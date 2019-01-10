@@ -8,5 +8,5 @@
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
 // ------------------------------------------------------------------------
-require("babel-register")
+require("@babel/register")
 require("./express")

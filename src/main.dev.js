@@ -9,18 +9,17 @@
  */
 // ------------------------------------------------------------------------
 
-require("babel-runtime/regenerator");
-require("babel-register");
-require("webpack-hot-middleware/client?reload=true");
-require('bootstrap');
-require("./main.scss");
-require("./index.html");
+import "@babel/register";
+import "webpack-hot-middleware/client?reload=true";
+import 'bootstrap';
+import "./main.scss";
+import "./index.html";
 
 import Venus from './Venus';
 
 /**
  * Venus Object
  */
-module.exports = new Venus;
+export default new Venus();
 
-require('./form');
+// require('./form');

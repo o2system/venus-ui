@@ -9,14 +9,14 @@
  */
 // ------------------------------------------------------------------------
 
-require('bootstrap');
-require("./main.scss");
+import 'bootstrap';
+import "./main.scss";
 
 import Venus from './Venus';
 
 /**
  * Venus Object
  */
-module.exports = new Venus;
+export default new Venus();
 
-require('./form');
+// require('./form');
