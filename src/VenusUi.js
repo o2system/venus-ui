@@ -15,7 +15,7 @@ import Popper from 'popper.js';
 /**
  * Class Venus
  */
-class Venus {
+class VenusUi {
     constructor() {
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
@@ -25,4 +25,4 @@ class Venus {
     }
 }
 
-export default Venus;
+export default VenusUi;

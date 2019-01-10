@@ -15,11 +15,11 @@ import 'bootstrap';
 import "./main.scss";
 import "./index.html";
 
-import Venus from './Venus';
+import VenusUi from './VenusUi';
 
 /**
  * Venus Object
  */
-export default new Venus();
+export default new VenusUi();
 
 // require('./form');
