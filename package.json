@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "ajv": "^6.5.0",
+    "autoprefixer": "^9.4.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -41,6 +42,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
+    "cssnano": "^4.1.8",
     "exports-loader": "^0.7.0",
     "express": "^4.16.3",
     "extract-loader": "1.0.2",
@@ -53,10 +55,15 @@
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
+    "postcss-scss": "^2.0.0",
     "sass": "^1.15.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.20.3",
+    "sugarss": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^0.6.2",
     "webpack": "^4.28.2",
@@ -92,5 +99,11 @@
     "switchery": "0.0.2",
     "tinymce": "^4.9.2",
     "toastr": "^2.1.4"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

@@ -11,13 +11,13 @@
 
 const path = require("path");
 const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const build = require('./webpack.build.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-module.exports = merge(common, {
+module.exports = merge(build, {
 	mode: "production",
 	entry: {
 		"venus-ui.min": "./src/main.js"
@@ -29,34 +29,27 @@ module.exports = merge(common, {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.(sa|sc|c)ss$/,
-				use: [
-				MiniCssExtractPlugin.loader,
-				'css-loader',
-				'sass-loader',
-				],
-			},
-			{
-				test: /\.html$/,
-				use: [{
-					loader: "html-loader",
-				}]
-			}
+		{
+			test: /\.html$/,
+			use: [{
+				loader: "html-loader",
+			}]
+		}
 		]
 	},
 
 	plugins: [
 	new HTMLWebpackPlugin({
-		title: "O2System Venus UI",
-		template: "./src/index.html",
-		minify: {
-			collapseWhitespace: true,
-			removeComments: true,
-			removeRedundantAttributes: true,
-			removeScriptTypeAttributes: true,
-			removeStyleLinkTypeAttributes: true
-		}
+			title: "O2System Venus UI",
+			template: "./src/index.html",
+			minify: {
+				collapseWhitespace: true,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
+			inject: "body"
         }), // Generates default index.html
 	new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output

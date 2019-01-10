@@ -42,9 +42,13 @@ module.exports = merge(common, {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
+                    { loader: "style-loader"},
+                    { loader: "css-loader"},
+                    {
+                        loader: "postcss-loader",
+                        options: {config: {path: 'config/postcss.config.js'}}
+                    },
+                    { loader: "sass-loader" },
                 ],
             },
             {
