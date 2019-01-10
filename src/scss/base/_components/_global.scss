@@ -1,6 +1,6 @@
 body {
-  	color: $body-color;
-    overflow-x: hidden;
+ color: $body-color;
+ overflow-x: hidden;
 }
 .title{
 	margin-bottom: 4rem;
@@ -83,4 +83,28 @@ section{
     &:after{
         display: none;
     }
+}
+
+.banner-0{
+    background-image: linear-gradient( 40deg, $primary 0%, lighten($primary, 25%) 100%);
+    height: 100vh;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    .bottom-shape{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        z-index: 1;
+        width: 100%; 
+    }
+}
+
+.banner{
+    position: relative;
+    padding: 0;
 }
