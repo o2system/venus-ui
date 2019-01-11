@@ -9,7 +9,6 @@
  */
 // ------------------------------------------------------------------------
 
-import 'bootstrap';
 import "./main.scss";
 
 import VenusUi from './VenusUi';

@@ -11,7 +11,7 @@
 
 import $ from "jquery";
 import Popper from 'popper.js';
-
+import 'bootstrap';
 /**
  * Class Venus
  */
@@ -22,6 +22,13 @@ class VenusUi {
 
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
+        
+        $('.nicescroll').niceScroll({
+            cursorcolor: "#000",
+            cursoropacitymax: 0.5,
+            cursorwidth: "3px"
+        });
+
     }
 }
 
