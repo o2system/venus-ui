@@ -21,5 +21,3 @@ import VenusUi from './VenusUi';
  * Venus Object
  */
 export default new VenusUi();
-
-// require('./form');

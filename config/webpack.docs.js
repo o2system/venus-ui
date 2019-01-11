@@ -13,7 +13,7 @@ const path = require("path");
 const merge = require('webpack-merge');
 const build = require('./webpack.build.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
@@ -59,14 +59,17 @@ module.exports = merge(build, {
         })
 	],
 	optimization: {
-		minimize: true,
 		minimizer: [
-		new UglifyJsPlugin({
-			include: /\.min\.js$/
-		}),
-		new OptimizeCSSAssetsPlugin({
-			include: /\.min\.css$/
-		})
-		]
+			new TerserPlugin({
+				terserOptions: {
+					output: {
+						comments: false,
+					},
+				},
+			}),
+			new OptimizeCSSAssetsPlugin({
+				include: /\.min\.css$/
+			})
+		],
 	}
 });
