@@ -24,7 +24,7 @@ module.exports = merge(build, {
 	},
 	output: {
 		filename: "[name].js",
-		path: path.resolve(__dirname, "../docs"),
+		path: path.resolve(process.cwd(), "docs"),
 		publicPath: "/venus-ui/"
 	},
 	module: {

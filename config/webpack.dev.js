@@ -25,7 +25,7 @@ module.exports = merge(common, {
     },
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "../dev"),
+        path: path.resolve(process.cwd(), "dev"),
         publicPath: "/"
     },
     devServer: {
