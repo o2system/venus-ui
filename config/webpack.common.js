@@ -13,31 +13,37 @@ const path = require("path");
 
 module.exports = {
     module: {
-        rules: [{
-                test: /\.js$/,
-                use: [{
-                    loader: "babel-loader"
-                }],
-                exclude: /(node_modules|bower_components)/
-            },
+        rules: [
+        {
+            test: /\.js$/,
+            use: [{
+                loader: "babel-loader"
+            }],
+            exclude: /(node_modules|bower_components)/
+        },
+        {
+            test: /\.(jpg|jpeg|gif|png|webpm|svg)$/,
+            use: [
             {
-                test: /\.(jpg|jpeg|gif|png|webpm|svg)$/,
-                use: [{
-                    loader: "file-loader",
-                    options: {
-                        name: "assets/img/[name].[ext]"
-                    }
-                }]
-            },
+                loader: "file-loader",
+                options: {
+                    name: "assets/img/[name].[ext]"
+                }
+            }
+            ]
+        },
+        
+        {
+            test: /.(woff|woff2|ttf|eot)$/,
+            use: [
             {
-                test: /.(woff|woff2|ttf|eot)$/,
-                use: [{
-                    loader: "file-loader",
-                    options: {
-                        name: "assets/webfonts/[name].[ext]"
-                    }
-                }]
-            },
+                loader: "file-loader",
+                options: {
+                    name: "assets/webfonts/[name].[ext]"
+                }
+            }
+            ]
+        },
 
         ],
 

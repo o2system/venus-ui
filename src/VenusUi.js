@@ -11,18 +11,26 @@
 
 import $ from "jquery";
 import Popper from 'popper.js';
-
+import 'bootstrap';
+import 'nicescroll';
 /**
  * Class Venus
  */
-class Venus {
+class VenusUi {
     constructor() {
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
 
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
+
+        $('.nicescroll').niceScroll({
+            cursorcolor: "#000",
+            cursoropacitymax: 0.5,
+            cursorwidth: "3px"
+        });
+
     }
 }
 
-module.exports = Venus;
+export default VenusUi;
