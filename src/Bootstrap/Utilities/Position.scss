@@ -1,0 +1,54 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Position
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Utilities
+ */
+// stylelint-disable declaration-no-important
+
+// Common values
+
+// Sass list not in variables since it's not intended for customization.
+// stylelint-disable-next-line scss/dollar-variable-default
+$positions: static, relative, absolute, fixed, sticky;
+
+@each $position in $positions {
+  .position-#{$position} { position: $position !important; }
+}
+
+// Shorthand
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.sticky-top {
+  @supports (position: sticky) {
+    position: sticky;
+    top: 0;
+    z-index: $zindex-sticky;
+  }
+}

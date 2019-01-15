@@ -1,0 +1,26 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Float
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Utilities
+ */
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .float#{$infix}-left  { @include float-left; }
+    .float#{$infix}-right { @include float-right; }
+    .float#{$infix}-none  { @include float-none; }
+  }
+}

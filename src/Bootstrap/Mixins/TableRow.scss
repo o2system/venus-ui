@@ -1,0 +1,47 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass TableRow
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+// Tables
+
+@mixin table-row-variant($state, $background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table-#{$state} {
+    &,
+    > th,
+    > td {
+      background-color: $background;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover {
+    $hover-background: darken($background, 5%);
+
+    .table-#{$state} {
+      @include hover {
+        background-color: $hover-background;
+
+        > td,
+        > th {
+          background-color: $hover-background;
+        }
+      }
+    }
+  }
+}

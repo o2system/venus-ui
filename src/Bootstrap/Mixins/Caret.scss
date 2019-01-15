@@ -1,0 +1,83 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Caret
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+@mixin caret-down {
+  border-top: $caret-width solid;
+  border-right: $caret-width solid transparent;
+  border-bottom: 0;
+  border-left: $caret-width solid transparent;
+}
+
+@mixin caret-up {
+  border-top: 0;
+  border-right: $caret-width solid transparent;
+  border-bottom: $caret-width solid;
+  border-left: $caret-width solid transparent;
+}
+
+@mixin caret-right {
+  border-top: $caret-width solid transparent;
+  border-right: 0;
+  border-bottom: $caret-width solid transparent;
+  border-left: $caret-width solid;
+}
+
+@mixin caret-left {
+  border-top: $caret-width solid transparent;
+  border-right: $caret-width solid;
+  border-bottom: $caret-width solid transparent;
+}
+
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: $caret-width * .85;
+      vertical-align: $caret-width * .85;
+      content: "";
+      @if $direction == down {
+        @include caret-down;
+      } @else if $direction == up {
+        @include caret-up;
+      } @else if $direction == right {
+        @include caret-right;
+      }
+    }
+
+    @if $direction == left {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-right: $caret-width * .85;
+        vertical-align: $caret-width * .85;
+        content: "";
+        @include caret-left;
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}

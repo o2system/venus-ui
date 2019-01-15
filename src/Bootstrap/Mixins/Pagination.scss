@@ -1,0 +1,39 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Pagination
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+// Pagination
+
+@mixin pagination-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  .page-link {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+
+  .page-item {
+    &:first-child {
+      .page-link {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &:last-child {
+      .page-link {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass BorderRadius
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+// Single side border-radius
+
+@mixin border-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+}
+
+@mixin border-top-radius($radius) {
+  @if $enable-rounded {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+}
+
+@mixin border-right-radius($radius) {
+  @if $enable-rounded {
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+}
+
+@mixin border-bottom-radius($radius) {
+  @if $enable-rounded {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}
+
+@mixin border-left-radius($radius) {
+  @if $enable-rounded {
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+  }
+}

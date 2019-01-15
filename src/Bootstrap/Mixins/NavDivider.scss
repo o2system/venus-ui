@@ -1,0 +1,27 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass NavDivider
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+@mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y) {
+  height: 0;
+  margin: $margin-y 0;
+  overflow: hidden;
+  border-top: 1px solid $color;
+}

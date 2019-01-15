@@ -1,0 +1,24 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Lists
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+// Lists
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}

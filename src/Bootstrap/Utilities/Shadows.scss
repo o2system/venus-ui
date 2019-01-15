@@ -1,0 +1,23 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Shadows
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Utilities
+ */
+// stylelint-disable declaration-no-important
+
+.shadow-sm { box-shadow: $box-shadow-sm !important; }
+.shadow { box-shadow: $box-shadow !important; }
+.shadow-lg { box-shadow: $box-shadow-lg !important; }
+.shadow-none { box-shadow: none !important; }

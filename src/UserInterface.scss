@@ -23,7 +23,11 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 // Bootstrap
-@import "bootstrap-custom/bootstrap.scss";
+@import "./Bootstrap/Custom.scss";
 
 // Components
 @import "./Components/Animation.scss";
+@import "./Components/Mixins.scss";
+@import "./Components/Global.scss";
+@import "./Components/Demo.scss";
+@import "./Components/Footer.scss";

@@ -1,0 +1,32 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+// ------------------------------------------------------------------------
+
+/**
+ * Sass Card
+ * 
+ * @author  Teguh Rianto
+ * @package Bootstrap/Mixins
+ */
+@mixin ribbon-variant ($background, $border, $hover-background: darken($background, 12.5%)) {
+	background: $background;
+	color: color-yiq($background);
+    &::before {
+      border-left: 3px solid darken($background, 15%);
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid darken($background, 15%);
+    }
+    &::after {
+        border-right: 3px solid darken($background, 15%);
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid darken($background, 15%);
+    }
+}
