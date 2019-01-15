@@ -9,11 +9,19 @@
  */
 // ------------------------------------------------------------------------
 
-import "./main.scss";
-
-import VenusUi from './VenusUi';
+import UserInterface from './UserInterface';
 
 /**
  * Venus Object
  */
-export default new VenusUi();
+export default class Venus extends Object {
+
+    /**
+     * Venus.constructor
+     */
+    constructor() {
+        this.userInterface = new UserInterface;
+    }
+}
+
+module.exports = new Venus;

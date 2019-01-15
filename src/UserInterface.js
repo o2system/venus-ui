@@ -13,10 +13,18 @@ import $ from "jquery";
 import Popper from 'popper.js';
 import 'bootstrap';
 import 'nicescroll';
+import "./UserInterface.scss";
+
 /**
- * Class Venus
+ * Class UserInterface
+ * 
+ * @author  Steeve Andrian Salim
  */
-class VenusUi {
+export default class UserInterface {
+
+    /**
+     * UserInterface.constructor
+     */
     constructor() {
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
@@ -29,8 +37,5 @@ class VenusUi {
             cursoropacitymax: 0.5,
             cursorwidth: "3px"
         });
-
     }
 }
-
-export default VenusUi;

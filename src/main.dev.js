@@ -11,13 +11,21 @@
 
 import "@babel/register";
 import "webpack-hot-middleware/client?reload=true";
-import 'bootstrap';
-import "./main.scss";
 import "./index.html";
 
-import VenusUi from './VenusUi';
+import UserInterface from './UserInterface';
 
 /**
  * Venus Object
  */
-export default new VenusUi();
+export default class Venus extends Object {
+
+    /**
+     * Venus.constructor
+     */
+    constructor() {
+        this.userInterface = new UserInterface;
+    }
+}
+
+module.exports = new Venus;
