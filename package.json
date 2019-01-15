@@ -5,10 +5,10 @@
   "homepage": "https://venus.o2system.id/ui",
   "main": "src/main.js",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "start": "npm run dev",
     "build": "webpack --config=config/webpack.build.js",
     "build:docs": "webpack --config=config/webpack.docs.js",
-    "dev": "nodemon --inspect --watch config --watch server server/main.js"
+    "dev": "webpack-dev-server --config=config/webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
-    "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.2.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^0.28.11",
@@ -46,7 +45,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "exports-loader": "^0.7.0",
-    "express": "^4.16.3",
     "extract-loader": "1.0.2",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
@@ -55,7 +53,6 @@
     "jshint": "^2.9.7",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
-    "nodemon": "^1.18.9",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
