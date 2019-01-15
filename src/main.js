@@ -12,16 +12,6 @@
 import UserInterface from './UserInterface';
 
 /**
- * Venus Object
+ * Venus User Interface Object
  */
-export default class Venus extends Object {
-
-    /**
-     * Venus.constructor
-     */
-    constructor() {
-        this.userInterface = new UserInterface;
-    }
-}
-
-module.exports = new Venus;
+module.exports = new UserInterface;
