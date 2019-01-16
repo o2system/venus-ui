@@ -14,4 +14,4 @@ import UserInterface from './UserInterface';
 /**
  * Venus User Interface Object
  */
-module.exports = new UserInterface;
+export default new UserInterface;

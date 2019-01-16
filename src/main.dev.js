@@ -12,7 +12,6 @@
 /**
  * Development Dependencies
  */
-import "@babel/register";
 import "webpack-hot-middleware/client?reload=true";
 import "./index.html";
 
@@ -23,4 +22,4 @@ import UserInterface from './UserInterface';
 /**
  * Venus User Interface Object
  */
-module.exports = new UserInterface;
+export default new UserInterface;
