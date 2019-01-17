@@ -88,12 +88,12 @@ $colors: map-merge(
 );
 
 $default:       $white !default;
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $orange !default;
-$danger:        $red !default;
+$primary:       #E38552 !default;
+$secondary:     #A19896 !default;
+$success:       #72D1BA !default;
+$info:          #6C90C2 !default;
+$warning:       #E3B887 !default;
+$danger:        #CC5B59 !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
@@ -118,7 +118,7 @@ $theme-colors: map-merge(
 $theme-color-interval:      8% !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold:  150 !default;
+$yiq-contrasted-threshold:  200 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
