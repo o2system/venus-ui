@@ -32,6 +32,18 @@ module.exports = {
             }
             ]
         },
+
+        {
+            test: /\.(mp4|mkv|avi|webm)$/,
+            use: [
+            {
+                loader: "file-loader",
+                options: {
+                    name: "assets/media/[name].[ext]"
+                }
+            }
+            ]
+        },
         
         {
             test: /.(woff|woff2|ttf|eot)$/,
