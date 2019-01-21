@@ -12,7 +12,7 @@
 import $ from "jquery";
 import Popper from 'popper.js';
 import 'bootstrap';
-import 'nicescroll';
+import 'jquery.nicescroll';
 import "./UserInterface.scss";
 
 /**
