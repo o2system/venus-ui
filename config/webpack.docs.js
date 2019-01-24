@@ -10,10 +10,10 @@
 // ------------------------------------------------------------------------
 
 const path = require("path");
-const merge = require('webpack-merge');
-const build = require('./webpack.build.js');
+const merge = require("webpack-merge");
+const build = require("./webpack.build.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
@@ -29,17 +29,17 @@ module.exports = merge(build, {
 	},
 	module: {
 		rules: [
-		{
-			test: /\.html$/,
-			use: [{
-				loader: "html-loader",
-			}]
-		}
+			{
+				test: /\.html$/,
+				use: [{
+					loader: "html-loader",
+				}]
+			}
 		]
 	},
 
 	plugins: [
-	new HTMLWebpackPlugin({
+		new HTMLWebpackPlugin({
 			title: "O2System Venus UI",
 			template: "./src/index.html",
 			minify: {
@@ -50,13 +50,13 @@ module.exports = merge(build, {
 				removeStyleLinkTypeAttributes: true
 			},
 			inject: "body"
-        }), // Generates default index.html
-	new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
+		}), // Generates default index.html
+		new MiniCssExtractPlugin({
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: "[name].css",
+			chunkFilename: "[id].css"
+		})
 	],
 	optimization: {
 		minimizer: [

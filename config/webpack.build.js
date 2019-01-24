@@ -10,11 +10,11 @@
 // ------------------------------------------------------------------------
 
 const path = require("path");
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
@@ -24,8 +24,7 @@ module.exports = merge(common, {
 	},
 	output: {
 		filename: "[name].js",
-		path: path.resolve(process.cwd(), "dist"),
-		publicPath: "/"
+		path: path.resolve(process.cwd(), "dist")
 	},
 	module: {
 		rules: [{
@@ -34,16 +33,16 @@ module.exports = merge(common, {
 				MiniCssExtractPlugin.loader,
 				{
 					loader: "css-loader",
-					options: {importLoaders: 1, sourceMap: true},
+					options: {importLoaders: 2, sourceMap: true},
 				},
-				{loader: 'postcss-loader',
+				{loader: "postcss-loader",
 					options: {
 						config: {
-							path: path.resolve(__dirname, 'postcss.config.js')
+							path: path.resolve(__dirname, "postcss.config.js")
 						}
 					}
 				},
-				'sass-loader',
+				"sass-loader",
 
 			],
 		}]
@@ -56,6 +55,7 @@ module.exports = merge(common, {
 			filename: "[name].css",
 			chunkFilename: "[id].css"
 		})
+
 	],
 	optimization: {
 		minimizer: [
@@ -67,7 +67,13 @@ module.exports = merge(common, {
 				},
 			}),
 			new OptimizeCSSAssetsPlugin({
-				include: /\.min\.css$/
+				// include: /\.min\.css$/,
+				assetNameRegExp: /\.min\.css$/g,
+				cssProcessor: require("cssnano"),
+				cssProcessorPluginOptions: {
+					preset: ["default", { discardComments: { removeAll: true } }],
+				},
+				canPrint: true
 			})
 		],
 	}
