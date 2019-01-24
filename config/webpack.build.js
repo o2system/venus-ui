@@ -24,8 +24,7 @@ module.exports = merge(common, {
 	},
 	output: {
 		filename: "[name].js",
-		path: path.resolve(process.cwd(), "dist"),
-		publicPath: "/"
+		path: path.resolve(process.cwd(), "dist")
 	},
 	module: {
 		rules: [{
@@ -34,7 +33,7 @@ module.exports = merge(common, {
 				MiniCssExtractPlugin.loader,
 				{
 					loader: "css-loader",
-					options: {importLoaders: 1, sourceMap: true},
+					options: {importLoaders: 2, sourceMap: true},
 				},
 				{loader: "postcss-loader",
 					options: {
@@ -56,6 +55,7 @@ module.exports = merge(common, {
 			filename: "[name].css",
 			chunkFilename: "[id].css"
 		})
+
 	],
 	optimization: {
 		minimizer: [
@@ -67,7 +67,13 @@ module.exports = merge(common, {
 				},
 			}),
 			new OptimizeCSSAssetsPlugin({
-				include: /\.min\.css$/
+				// include: /\.min\.css$/,
+				assetNameRegExp: /\.min\.css$/g,
+				cssProcessor: require("cssnano"),
+				cssProcessorPluginOptions: {
+					preset: ["default", { discardComments: { removeAll: true } }],
+				},
+				canPrint: true
 			})
 		],
 	}

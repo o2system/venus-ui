@@ -4,6 +4,13 @@ module.exports = {
 		"postcss-preset-env": {
 			browsers: "last 4 versions",
 		},
-		"cssnano": {}
+		// "cssnano": {
+		// 	convertValues: {
+		// 		length: false
+		// 	},
+		// 	discardComments: {
+		// 		removeAll: true
+		// 	}
+		// }
 	}
 };
