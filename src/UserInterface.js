@@ -30,6 +30,7 @@ export default class UserInterface {
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
 
+        $('[data-toggle="dropdown"]').dropdown();
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
 
