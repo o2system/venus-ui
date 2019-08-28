@@ -21391,9 +21391,9 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/Components/Demo.scss":
+/***/ "./src/Components/demo.scss":
 /*!**********************************!*\
-  !*** ./src/Components/Demo.scss ***!
+  !*** ./src/Components/demo.scss ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -21485,14 +21485,14 @@ function UserInterface() {
 
 /***/ 0:
 /*!****************************************************************************************!*\
-  !*** multi ./src/UserInterface.js ./src/UserInterface.scss ./src/Components/Demo.scss ***!
+  !*** multi ./src/UserInterface.js ./src/UserInterface.scss ./src/Components/demo.scss ***!
   \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Applications/MAMP/htdocs/o2system/venus-ui/src/UserInterface.js */"./src/UserInterface.js");
 __webpack_require__(/*! /Applications/MAMP/htdocs/o2system/venus-ui/src/UserInterface.scss */"./src/UserInterface.scss");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/o2system/venus-ui/src/Components/Demo.scss */"./src/Components/Demo.scss");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/o2system/venus-ui/src/Components/demo.scss */"./src/Components/demo.scss");
 
 
 /***/ })

@@ -19,15 +19,15 @@ blender.setOutputPath('assets/');
 blender.setResourceRoot('');
 
 if(isDev) {
-    blender.setPublicPath('./demo/');
+    blender.setPublicPath('./docs/');
 
     blender.webpackConfig({
         output: {
-            path: path.resolve(__dirname, './demo/'),
+            path: path.resolve(__dirname, './docs/'),
             publicPath: './'
         },
         devServer: {
-            contentBase: './demo/',
+            contentBase: './docs/',
             hot: true,
             open: true,
         },
@@ -59,9 +59,9 @@ if(isDev) {
         ]
     });
     
-    blender.js('./src/UserInterface.js', './demo/venus-ui.js')
-        .sass('./src/UserInterface.scss', './demo/venus-ui.css')
-        .sass('./src/Components/Demo.scss', './demo/venus-demo.css');
+    blender.js('./src/UserInterface.js', './docs/venus-ui.js')
+        .sass('./src/UserInterface.scss', './docs/venus-ui.css')
+        .sass('./src/Components/demo.scss', './docs/venus-demo.css');
 } else {
     blender.setPublicPath('./dist/');
 
