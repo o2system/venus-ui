@@ -19,7 +19,7 @@ Open-source user interface framework based on jQuery and bootstrap. The new gene
 ### Node Package Manager (NPM) Installation
 The best way to install O2System Venus UI is to use [NPM](https://npmjs.org)
 ```
-npm install o2system/venus-ui
+npm install o2system-venus-ui
 ```
 > NPM: [https://www.npmjs.com/package/o2system-venus-ui](https://www.npmjs.com/package/o2system-venus-ui)
 
