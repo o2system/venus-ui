@@ -23,7 +23,7 @@
 		background-position: bottom;
 		background-size: cover;
 		padding-bottom: 80px;
-		background-image: none;
+		background-image: url('./assets/img/bg-venus.png');
 		
 		// &:before{
 		// 	position: absolute;
@@ -55,6 +55,10 @@
 		.navbar{
 			margin-bottom: 1.5rem;
 		}
+	}
+
+	.bg-clean{
+		background-image: url('./assets/img/bg-venus-clean.jpg');
 	}
 
 	.icons-container {

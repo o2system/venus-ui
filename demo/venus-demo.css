@@ -1,0 +1,151 @@
+/**
+ * This file is part of the O2System Venus UI Framework package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Steeve Andrian Salim
+ * @copyright      Copyright (c) Steeve Andrian Salim
+ */
+
+/**
+ * Sass Demo
+ * 
+ * @author  Teguh Rianto
+ * @package Components
+ */
+
+.demo .banner {
+  padding: 0;
+}
+
+.demo .banner-0 {
+  background-position: bottom;
+  background-size: cover;
+  padding-bottom: 80px;
+  background-image: url(./assets/img/bg-venus.png?4f7384549b17a50e624667ba9ff91295);
+}
+
+.demo section {
+  padding: 50px 0;
+}
+
+.demo h4 {
+  margin-top: 30px;
+  margin-bottom: 0rem;
+}
+
+.demo h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.demo .demo-navigations {
+  background-size: cover;
+  background-position: bottom;
+  padding-bottom: 5rem;
+  margin-top: 30px;
+}
+
+.demo .demo-navigations .navbar {
+  margin-bottom: 1.5rem;
+}
+
+.demo .bg-clean {
+  background-image: url(./assets/img/bg-venus-clean.jpg?dd1b9a610526f538f8fce6668e6819f7);
+}
+
+.demo .icons-container {
+  position: relative;
+  max-width: 450px;
+  height: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.demo .icons-container i {
+  font-size: 34px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.demo .icons-container i:nth-child(1) {
+  top: 5%;
+  left: 7%;
+}
+
+.demo .icons-container i:nth-child(2) {
+  top: 28%;
+  left: 24%;
+}
+
+.demo .icons-container i:nth-child(3) {
+  top: 40%;
+}
+
+.demo .icons-container i:nth-child(4) {
+  top: 18%;
+  left: 62%;
+}
+
+.demo .icons-container i:nth-child(5) {
+  top: 74%;
+  left: 3%;
+}
+
+.demo .icons-container i:nth-child(6) {
+  top: 36%;
+  left: 44%;
+  font-size: 65px;
+  color: #f96332;
+  padding: 1px;
+}
+
+.demo .icons-container i:nth-child(7) {
+  top: 59%;
+  left: 26%;
+}
+
+.demo .icons-container i:nth-child(8) {
+  top: 60%;
+  left: 69%;
+}
+
+.demo .icons-container i:nth-child(9) {
+  top: 72%;
+  left: 47%;
+}
+
+.demo .icons-container i:nth-child(10) {
+  top: 88%;
+  left: 27%;
+}
+
+.demo .icons-container i:nth-child(11) {
+  top: 31%;
+  left: 80%;
+}
+
+.demo .icons-container i:nth-child(12) {
+  top: 88%;
+  left: 68%;
+}
+
+.demo .icons-container i:nth-child(13) {
+  top: 5%;
+  left: 81%;
+}
+
+.demo .icons-container i:nth-child(14) {
+  top: 58%;
+  left: 90%;
+}
+
+.demo .icons-container i:nth-child(15) {
+  top: 6%;
+  left: 40%;
+}
+
+
+/*# sourceMappingURL=venus-demo.css.map*/

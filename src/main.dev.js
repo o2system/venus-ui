@@ -13,8 +13,6 @@
  * Development Dependencies
  */
 import "webpack-hot-middleware/client?reload=true";
-import "./index.html";
-
 import UserInterface from './UserInterface';
 
 // ------------------------------------------------------------------------
