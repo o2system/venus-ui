@@ -1,6 +1,6 @@
 {
   "name": "o2system-venus-ui",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "O2System User Interface Framework",
   "homepage": "https://venus.o2system.id/ui",
   "main": "src/main.js",
@@ -50,9 +50,7 @@
     "sass": "^1.15.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.1",

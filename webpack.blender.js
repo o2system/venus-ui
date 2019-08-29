@@ -18,6 +18,11 @@ const isDev = process.env.NODE_ENV !== 'production';
 blender.setOutputPath('assets/');
 blender.setResourceRoot('');
 
+let htmlFilename = 'index';
+if(typeof process.env.npm_config_filename !== 'undefined') {
+    htmlFilename = process.env.npm_config_filename;
+}
+
 if(isDev) {
     blender.setPublicPath('./docs/');
 
@@ -51,9 +56,9 @@ if(isDev) {
         plugins: [
             new HtmlWebpackPlugin({
                 title: 'O2System Venus UI',
-                template: './src/index.html',
+                template: './src/' + htmlFilename + '.html',
                 inject: 'body',
-                filename: 'index.html',
+                filename: htmlFilename + '.html',
                 hash: true
             })
         ]
