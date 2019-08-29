@@ -10,11 +10,14 @@
 // ------------------------------------------------------------------------
 
 import $ from 'jquery';
+window.$ = window.jQuery = $;
 import Popper from 'popper.js';
+window.Popper = Popper.default;
 import 'bootstrap';
 import 'offline-js';
 import PerfectScrollbar from 'perfect-scrollbar';
 const Pace = require('pace-js-amd-fix');
+require("@fancyapps/fancybox");
 
 /**
  * Class UserInterface
@@ -28,9 +31,6 @@ class UserInterface {
      */
     constructor() {
         Pace.start();
-        window.Popper = Popper.default;
-        window.$ = window.jQuery = $;
-
 
         $(".perfect-scrollbar").each(function(){ 
             const ps = new PerfectScrollbar($(this)[0]); 
