@@ -12,7 +12,6 @@
 import $ from "jquery";
 import Popper from 'popper.js';
 import 'bootstrap';
-import 'jquery.nicescroll';
 import 'offline-js';
 import "./UserInterface.scss";
 
