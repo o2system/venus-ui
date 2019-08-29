@@ -9,17 +9,19 @@
  */
 // ------------------------------------------------------------------------
 
-import $ from "jquery";
+import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap';
 import 'offline-js';
-import "./UserInterface.scss";
+import PerfectScrollbar from 'perfect-scrollbar';
+const Pace = require('pace-js-amd-fix');
 
 /**
  * Class UserInterface
  * 
- * @author  Steeve Andrian Salim
+ * @author  Teguh Rianto
  */
+Pace.start();
 export default class UserInterface {
 
     /**
@@ -29,14 +31,13 @@ export default class UserInterface {
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
 
+
+        $(".perfect-scrollbar").each(function(){ 
+            const ps = new PerfectScrollbar($(this)[0]); 
+        });
+
         $('[data-toggle="dropdown"]').dropdown();
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
-
-        $('.nicescroll').niceScroll({
-            cursorcolor: "#000",
-            cursoropacitymax: 0.5,
-            cursorwidth: "3px"
-        });
     }
 }

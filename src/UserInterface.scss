@@ -23,6 +23,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~offline-js/themes/offline-theme-default";
 @import "~offline-js/themes/offline-language-english";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
 
 // Bootstrap
 @import "./Bootstrap/Custom.scss";
@@ -30,6 +31,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 // Components
 @import "./Components/Animation.scss";
 @import "./Components/Mixins.scss";
+@import "./Components/Pace.scss";
 @import "./Components/Global.scss";
 @import "./Components/Tab.scss";
 @import "./Components/Footer.scss";
