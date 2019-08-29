@@ -11,6 +11,6 @@
 import UserInterface from './UserInterface';
 
 /**
- * Form Object
+ * UserInterface Object
  */
-export default new UserInterface();
+export default new UserInterface;

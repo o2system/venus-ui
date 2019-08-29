@@ -22,7 +22,7 @@ const Pace = require('pace-js-amd-fix');
  * @author  Teguh Rianto
  */
 Pace.start();
-export default class UserInterface {
+class UserInterface {
 
     /**
      * UserInterface.constructor
@@ -41,3 +41,5 @@ export default class UserInterface {
         $('[data-toggle="tooltip"]').tooltip();
     }
 }
+
+export default new UserInterface;
