@@ -13,4 +13,4 @@ import UserInterface from './UserInterface';
 /**
  * UserInterface Object
  */
-export default new UserInterface;
+export default UserInterface;
