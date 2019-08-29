@@ -19990,8 +19990,6 @@ var Pace = __webpack_require__(/*! pace-js-amd-fix */ "./node_modules/pace-js-am
  */
 
 
-Pace.start();
-
 var UserInterface =
 /**
  * UserInterface.constructor
@@ -19999,6 +19997,7 @@ var UserInterface =
 function UserInterface() {
   _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, UserInterface);
 
+  Pace.start();
   window.Popper = popper_js__WEBPACK_IMPORTED_MODULE_2__["default"].default;
   window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_1___default.a;
   jquery__WEBPACK_IMPORTED_MODULE_1___default()(".perfect-scrollbar").each(function () {

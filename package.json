@@ -1,6 +1,6 @@
 {
   "name": "o2system-venus-ui",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "O2System User Interface Framework",
   "homepage": "https://venus.o2system.id/ui",
   "main": "src/main.js",

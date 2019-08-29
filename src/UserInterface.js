@@ -21,13 +21,13 @@ const Pace = require('pace-js-amd-fix');
  * 
  * @author  Teguh Rianto
  */
-Pace.start();
 class UserInterface {
-
+    
     /**
      * UserInterface.constructor
      */
     constructor() {
+        Pace.start();
         window.Popper = Popper.default;
         window.$ = window.jQuery = $;
 
