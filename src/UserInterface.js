@@ -9,37 +9,35 @@
  */
 // ------------------------------------------------------------------------
 
-import $ from 'jquery';
-window.$ = window.jQuery = $;
+import $ from "jquery";
 import Popper from 'popper.js';
-window.Popper = Popper.default;
 import 'bootstrap';
+import 'jquery.nicescroll';
 import 'offline-js';
-import PerfectScrollbar from 'perfect-scrollbar';
-const Pace = require('pace-js-amd-fix');
-require("@fancyapps/fancybox");
+import "./UserInterface.scss";
 
 /**
  * Class UserInterface
  * 
- * @author  Teguh Rianto
+ * @author  Steeve Andrian Salim
  */
-class UserInterface {
-    
+export default class UserInterface {
+
     /**
      * UserInterface.constructor
      */
     constructor() {
-        Pace.start();
-
-        $(".perfect-scrollbar").each(function(){ 
-            const ps = new PerfectScrollbar($(this)[0]); 
-        });
+        window.Popper = Popper.default;
+        window.$ = window.jQuery = $;
 
         $('[data-toggle="dropdown"]').dropdown();
         $('[data-toggle="popover"]').popover();
         $('[data-toggle="tooltip"]').tooltip();
+
+        $('.nicescroll').niceScroll({
+            cursorcolor: "#000",
+            cursoropacitymax: 0.5,
+            cursorwidth: "3px"
+        });
     }
 }
-
-export default new UserInterface;
